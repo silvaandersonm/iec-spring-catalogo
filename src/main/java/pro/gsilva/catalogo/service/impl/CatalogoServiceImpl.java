@@ -15,14 +15,13 @@ public class CatalogoServiceImpl implements CatalogoService {
     @Autowired 
     private CatalogoRepository catalogoRepository;
 
-
     @Override
     public List<Musica> findAll() {       
         return catalogoRepository.findAll();
     }
 
     @Override
-    public Musica findById(long id) {        
+    public Musica findById(Long id) {        
         return catalogoRepository.findById(id).get();
     }
 
@@ -32,7 +31,7 @@ public class CatalogoServiceImpl implements CatalogoService {
     }
 
     @Override
-    public void excluir(long id) {
+    public void delete(Long id) {
         catalogoRepository.deleteById(id);
     }
 

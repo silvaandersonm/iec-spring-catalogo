@@ -6,9 +6,8 @@ import pro.gsilva.catalogo.model.Musica;
 
 public interface CatalogoService {
     List<Musica> findAll();
-    Musica findById(long id);
+    Musica findById(Long id);
     Musica save(Musica musica);
-    void excluir(long id);
-
+    void delete(Long id);
     List<Musica> findByTitulo(String titulo);
 }
