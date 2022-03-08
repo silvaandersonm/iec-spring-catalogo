@@ -4,8 +4,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.annotation.PostConstruct;
-
 import lombok.extern.slf4j.Slf4j;
 import pro.gsilva.catalogo.model.Categoria;
 import pro.gsilva.catalogo.model.Musica;
