@@ -6,4 +6,7 @@ import pro.gsilva.catalogo.model.Categoria;
 
 public interface CategoriaService {
     Page<Categoria> findAll(Pageable pageable);
+    Categoria findById(Long id);
+    Categoria save(Categoria musica);
+    void delete(Long id);
 }

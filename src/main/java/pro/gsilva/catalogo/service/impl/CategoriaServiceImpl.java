@@ -10,6 +10,7 @@ import pro.gsilva.catalogo.service.CategoriaService;
 
 @Service
 public class CategoriaServiceImpl implements CategoriaService {
+
     @Autowired
     private CategoriaRepository categoriaRepository;
 
@@ -17,4 +18,20 @@ public class CategoriaServiceImpl implements CategoriaService {
     public Page<Categoria> findAll(Pageable pageable) {
         return categoriaRepository.findAll(pageable);
     }
+
+    @Override
+    public Categoria findById(Long id) {        
+        return categoriaRepository.findById(id).get();
+    }
+
+    @Override
+    public Categoria save(Categoria categoria) {        
+        return categoriaRepository.save(categoria);
+    }
+
+    @Override
+    public void delete(Long id) {
+        categoriaRepository.deleteById(id);
+    }
+
 }
