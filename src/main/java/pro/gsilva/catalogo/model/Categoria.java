@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="categoria")
@@ -22,6 +23,7 @@ public class Categoria {
 
     @Column(name="nm_categoria", length=30, nullable=false)
     @NotBlank
+    @Size(max=30, message="{javax.validation.constraints.Size.categoria.nome.message}")
     private String nome;
 
 }
