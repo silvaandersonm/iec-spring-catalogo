@@ -3,6 +3,7 @@ package pro.gsilva.catalogo.repository;
 import pro.gsilva.catalogo.model.Musica;
 
 import javax.persistence.EntityManager;
+
 import java.util.List;
 
 public class CustomCatalogoRepositoryImpl implements CustomCatalogoRepository {
@@ -20,4 +21,5 @@ public class CustomCatalogoRepositoryImpl implements CustomCatalogoRepository {
                 .setParameter("titulo", tituloUpper)
                 .getResultList();
     }
+
 }

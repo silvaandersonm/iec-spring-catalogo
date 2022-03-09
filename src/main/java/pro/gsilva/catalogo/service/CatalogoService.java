@@ -10,4 +10,5 @@ public interface CatalogoService {
     Musica save(Musica musica);
     void delete(Long id);
     List<Musica> findByTitulo(String titulo);
+    List<Musica> findByTituloAndCategoria(String titulo, Long idCategoria);
 }
